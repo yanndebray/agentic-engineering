@@ -18,7 +18,7 @@ Big data engineering and analysis using aircraft sensor data provided by NASA. S
 
 ## Transcripts and Replay
 
-[Claude-Code-transcripts]():
+Claude-Code-transcripts - [by Simon Willison](https://simonw.substack.com/p/a-new-way-to-extract-detailed-transcripts):
 - [claude-session-2026-03-04](https://yanndebray.github.io/agentic-engineering/claude-session-2026-03-04/)
 
 [Codex Replay](https://github.com/es617/claude-replay):
