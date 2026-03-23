@@ -16,6 +16,14 @@ Big data engineering and analysis using aircraft sensor data provided by NASA. S
 
 **Stack:** MATLAB, Parallel Computing Toolbox, Cloud Center
 
+## Transcripts and Replay
+
+[Claude-Code-transcripts]():
+- [claude-session-2026-03-04](https://yanndebray.github.io/agentic-engineering/claude-session-2026-03-04/)
+
+[Codex Replay](https://github.com/es617/claude-replay):
+- [rollout-2026-03-23T17-21-04-019d1c92-a021-7230-95ce-dfad33eb74b5](rollout-2026-03-23T17-21-04-019d1c92-a021-7230-95ce-dfad33eb74b5/replay.html)
+
 ## License
 
 MIT License — see [LICENSE](LICENSE) for details.
