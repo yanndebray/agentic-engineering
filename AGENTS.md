@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
 
 ## Repository Overview
 
@@ -22,8 +22,8 @@ Pipeline: Load fleet driving data (VED, 383 vehicles, 22 weekly CSVs) → extrac
 
 - **Key files**: `fleet_virtual_vehicle.m` (main orchestration, ~700KB plain-text Live Script), `VED_Analysis.m` (data exploration), `VEDExplorer.m` (interactive GUI), `VED_Fleet_Report.m`
 - **Simulink models**: `EVFleetProject/` contains three VirtualVehicle variants (VirtualVehicle, VirtualVehicle1, VirtualVehicle2). Each is a Simulink project with subsystem projects (CI, Driveline, Electrical, Thermal, etc.). `VirtualVehicle2/` is the most complete.
-- **Has its own `CLAUDE.md`** with S3 access patterns and bucket structure
-- **Has a Claude skill** at `.claude/skills/cloud-based-virtual-vehicle-simulation/` — 5-stage workflow (Build → Configure → Scale → Integrate → Validate)
+- **Has its own `AGENTS.md`** with S3 access patterns and bucket structure
+- **Has a Codex skill** at `.Codex/skills/cloud-based-virtual-vehicle-simulation/` — 5-stage workflow (Build → Configure → Scale → Integrate → Validate)
 - **AWS**: S3 bucket `s3://automotivecloud/`, profile name `autocloud`
 - **CI/CD**: GitLab Pages deployment (`.gitlab-ci.yml`)
 - **No buildtool/test pipeline** — run scripts directly in MATLAB
