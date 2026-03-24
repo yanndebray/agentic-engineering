@@ -1,0 +1,54 @@
+name: aerodata
+
+on:
+  push:
+    paths:
+      - ".github/workflows/aerodata.yml"
+      - "aerodata/**"
+  pull_request:
+    paths:
+      - ".github/workflows/aerodata.yml"
+      - "aerodata/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  MLM_LICENSE_TOKEN: ${{ secrets.MLM_LICENSE_TOKEN }}
+
+jobs:
+  buildtool-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Start virtual display server
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          Xvfb :99 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
+
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v2
+        with:
+          release: R2025b
+          cache: true
+          products: MATLAB
+
+      - name: Open project and run buildtool test
+        uses: matlab-actions/run-command@v2
+        with:
+          command: "cd('aerodata'); openProject(pwd); buildtool test"
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aerodata-results
+          path: |
+            aerodata/Results/**
+          if-no-files-found: ignore

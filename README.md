@@ -10,11 +10,13 @@ End-to-end pipeline combining real-world fleet driving data (VED dataset, 383 ve
 
 **Stack:** MATLAB, Simulink, Powertrain Blockset, AWS S3, Parallel Computing Toolbox
 
-### [nasa-aircraft-big-data](nasa-aircraft-big-data/) — NASA Aircraft Sensor Data Engineering
+### [aerodata](aerodata/) — NASA Aircraft Sensor Data Engineering
 
 Big data engineering and analysis using aircraft sensor data provided by NASA. Supports predictive maintenance, digital twins, AI with signals, and fleet analytics workflows.
 
 **Stack:** MATLAB, Parallel Computing Toolbox, Cloud Center
+
+Based on and simplified from the MATLAB testing workshop example [Generating Tests for Your MATLAB Code Workshop](https://github.com/yanndebray/Generating-Tests-for-Your-MATLAB-Code-Workshop).
 
 ## Transcripts and Replay
 
