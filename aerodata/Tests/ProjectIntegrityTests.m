@@ -3,7 +3,7 @@ classdef ProjectIntegrityTests < matlab.unittest.TestCase
         function projectHasExpectedName(testCase)
             project = currentProject();
             testCase.assertNotEmpty(project);
-            testCase.verifyEqual(string(project.Name),"aerodata");
+            testCase.verifyEqual(string(project.Name),"aerodata-broken");
         end
 
         function expectedProjectFilesExist(testCase)
